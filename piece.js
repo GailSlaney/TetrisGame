@@ -3,12 +3,18 @@ class Piece{
     constructor(ctx) {
         this.ctx = ctx;
         
+       /*
         this.color = 'blue';
         this.shape = [
         [2,0,0],
         [2,2,2],
         [0,0,0]
         ];
+        */
+
+        const typeId = this.randomizeTetrominoType(COLORS.length);
+        this.shape = SHAPES[typeId];
+        this.color = COLORS[typeId];
 
         //starting position.
         this.x = 3;
@@ -26,5 +32,9 @@ class Piece{
             });
             
         });
+    }
+
+    randomizeTetrominoType(noOfTypes) {
+        return Math.floor(Math.random() * noOfTypes);
     }
 }
