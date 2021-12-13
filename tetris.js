@@ -1,15 +1,7 @@
-console.log('number 2');
-
-
-const myObject = {
-    method(){
-        console.log(this);
-}}
-myObject.method();
-console.log ('Hello');
 const COLS = 10;
 const ROWS = 20;
 const BLOCK_SIZE = 30;
+
 const canvas = document.getElementById('board');
 const ctx = canvas.getContext('2d');
 
