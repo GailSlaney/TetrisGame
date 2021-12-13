@@ -1,5 +1,16 @@
 class Piece{
-    constructor(ctx) {
+    draw() {
+        this.ctx.fillstyle = this.color;
+        this.shape.forEach((row, y) => {
+            row.forEach((value, x) => {
+                if (value > 0){
+                    this.ctx.fillRect(this.x + x, this.y + y, 1, 1);
+                }
+            });
+            
+        });
+    }
+    /*constructor(ctx) {
         this.ctx = ctx;
         
         this.color = 'blue';
@@ -13,4 +24,5 @@ class Piece{
         this.x = 3;
         this.y = 0;
     }
+    */
 }
